@@ -7,9 +7,9 @@
 
 # Official Blockfrost SDK Client
 
-[![Build status](https://github.com/blockfrost/blockfrost-go/actions/workflows/test.yml/badge.svg?branch=staging)](https://github.com/blockfrost/blockfrost-go/actions/workflows/test.yml)
-[![Go report card](https://goreportcard.com/badge/github.com/blockfrost/blockfrost-go)](https://goreportcard.com/report/github.com/blockfrost/blockfrost-go)
-[![GoDoc](https://godoc.org/github.com/blockfrost/blockfrost-go?status.svg)](https://godoc.org/github.com/blockfrost/blockfrost-go)
+[![Build status](https://github.com/fabioDMFerreira/blockfrost-go/actions/workflows/test.yml/badge.svg?branch=staging)](https://github.com/fabioDMFerreira/blockfrost-go/actions/workflows/test.yml)
+[![Go report card](https://goreportcard.com/badge/github.com/fabioDMFerreira/blockfrost-go)](https://goreportcard.com/report/github.com/fabioDMFerreira/blockfrost-go)
+[![GoDoc](https://godoc.org/github.com/fabioDMFerreira/blockfrost-go?status.svg)](https://godoc.org/github.com/fabioDMFerreira/blockfrost-go)
 
 ## Getting started
 
@@ -24,12 +24,13 @@ To use this SDK, you first need to log in to [blockfrost.io](https://blockfrost.
 `blockfrost-go` can be installed through go get
 
 ```console
-$ go get https://github.com/blockfrost/blockfrost-go
+$ go get https://github.com/fabioDMFerreira/blockfrost-go
 ```
 
 ## Usage
 
 ### Cardano API
+
 ```go
 package main
 
@@ -38,7 +39,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/blockfrost/blockfrost-go"
+	"github.com/fabioDMFerreira/blockfrost-go"
 )
 
 func main() {
@@ -71,7 +72,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/blockfrost/blockfrost-go"
+	"github.com/fabioDMFerreira/blockfrost-go"
 )
 
 var (
@@ -99,8 +100,8 @@ func main() {
 }
 ```
 
-More examples of usage can be found in [`example`](https://github.com/blockfrost/blockfrost-go/tree/master/example) folder.
+More examples of usage can be found in [`example`](https://github.com/fabioDMFerreira/blockfrost-go/tree/master/example) folder.
 
 ## License
 
-Licensed under the [Apache License 2.0](https://opensource.org/licenses/Apache-2.0), see [`LICENSE`](https://github.com/blockfrost/blockfrost-go/blob/master/LICENSE)
+Licensed under the [Apache License 2.0](https://opensource.org/licenses/Apache-2.0), see [`LICENSE`](https://github.com/blockfrost-go/blob/master/LICENSE)

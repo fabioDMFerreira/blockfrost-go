@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/blockfrost/blockfrost-go"
+	"github.com/fabioDMFerreira/blockfrost-go"
 )
 
 func TestNetworkUnmarshal(t *testing.T) {

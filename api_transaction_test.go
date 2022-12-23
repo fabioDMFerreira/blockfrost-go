@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/blockfrost/blockfrost-go"
+	"github.com/fabioDMFerreira/blockfrost-go"
 )
 
 func TestTransactionContentUnmarshal(t *testing.T) {

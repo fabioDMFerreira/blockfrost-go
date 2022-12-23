@@ -3,7 +3,7 @@ package blockfrost_test
 import (
 	"testing"
 
-	"github.com/blockfrost/blockfrost-go"
+	"github.com/fabioDMFerreira/blockfrost-go"
 )
 
 func TestClientInit(t *testing.T) {

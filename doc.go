@@ -16,10 +16,10 @@
 		}
 
 	Examples can be found at
-	https://github.com/blockfrost/blockfrost-go/tree/master/example
+	https://github.com/fabioDMFerreira/blockfrost-go/tree/master/example
 
 	If you find an issue with the SDK, please report through
-	https://github.com/blockfrost/blockfrost-go/issues/new
+	https://github.com/fabioDMFerreira/blockfrost-go/issues/new
 */
 
 package blockfrost
