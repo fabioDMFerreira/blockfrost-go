@@ -3,7 +3,6 @@ module github.com/fabioDMFerreira/blockfrost-go
 go 1.17
 
 require (
-	github.com/fabioDMFerreira/blockfrost-go v0.1.0
 	github.com/hashicorp/go-retryablehttp v0.7.0
 )
 
