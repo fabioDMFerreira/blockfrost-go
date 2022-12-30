@@ -226,6 +226,33 @@ func (c *apiClient) AddressUTXOs(ctx context.Context, address string, query APIQ
 	return utxos, nil
 }
 
+func (c *apiClient) AddressUTXOsAsset(ctx context.Context, address string, asset string, query APIQueryParams) (utxos []AddressUTXO, err error) {
+	requestUrl, err := url.Parse(fmt.Sprintf("%s/%s/%s/%s/%s", c.server, resourceAddresses, address, resourceUTXOs, asset))
+	if err != nil {
+		return
+	}
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, requestUrl.String(), nil)
+	if err != nil {
+		return
+	}
+	v := req.URL.Query()
+	query.From = ""
+	query.To = ""
+	v = formatParams(v, query)
+	req.URL.RawQuery = v.Encode()
+
+	res, err := c.handleRequest(req)
+	if err != nil {
+		return
+	}
+	defer res.Body.Close()
+
+	if err = json.NewDecoder(res.Body).Decode(&utxos); err != nil {
+		return
+	}
+	return utxos, nil
+}
+
 func (c *apiClient) AddressUTXOsAll(ctx context.Context, address string) <-chan AddressUTXOResult {
 	ch := make(chan AddressUTXOResult, c.routines)
 	jobs := make(chan methodOptions, c.routines)

@@ -40,7 +40,8 @@ type APIClientOptions struct {
 }
 
 // NewAPICLient creates a client from APIClientOptions. If no options are provided,
-//  client with default configurations is returned.
+//
+//	client with default configurations is returned.
 func NewAPIClient(options APIClientOptions) APIClient {
 	if options.Server == "" {
 		options.Server = CardanoMainNet
@@ -103,6 +104,7 @@ type APIClient interface {
 	AddressTransactions(ctx context.Context, address string, query APIQueryParams) ([]AddressTransactions, error)
 	AddressTransactionsAll(ctx context.Context, address string) <-chan AddressTxResult
 	AddressUTXOs(ctx context.Context, address string, query APIQueryParams) ([]AddressUTXO, error)
+	AddressUTXOsAsset(ctx context.Context, address string, asset string, query APIQueryParams) (utxos []AddressUTXO, err error)
 	AddressUTXOsAll(ctx context.Context, address string) <-chan AddressUTXOResult
 	Account(ctx context.Context, stakeAddress string) (Account, error)
 	AccountHistory(ctx context.Context, stakeAddress string, query APIQueryParams) ([]AccountHistory, error)
